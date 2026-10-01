@@ -30,9 +30,9 @@ $$C=
 where
 
 $$\Omega_v^-(w) =
-\sum_T n_T(r)\,w
+\sum_T n_T(r) w
 \int_{E_R^{\min}}^{E_R^{\max}}
-dE_R\,
+dE_R
 \frac{d\sigma_T}{dE_R}$$
 
 Thus, the capture calculation contains the factor $w^2$ after substituting $\Omega_v^-(w)$.
