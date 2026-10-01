@@ -32,11 +32,11 @@ The main physical sequence is
 
 The main NR-EFT operators studied are
 
-\[
+\begin{equation}
 \mathcal{O}_4,\qquad
 \mathcal{O}_8,\qquad
 \mathcal{O}_{15}.
-\]
+\end{equation}
 
 ---
 
@@ -295,19 +295,11 @@ A realistic neutrino prediction requires the neutrino spectrum, propagation thro
 ├── requirements.txt
 │
 ├── notebooks/
-│   ├── capture_rate.ipynb
-│   ├── orbital_evolution.ipynb
-│   ├── thermalization.ipynb
-│   └── annihilation_neutrino_flux.ipynb
+│   |
+│   └── annihilation & flux.ipynb
 │
 ├── data/
 │   ├── bp2000_standard.txt
 │   └── AGSS09/
-│
-├── results/
-│   ├── capture_results_BP2000.npy
-│   ├── capture_results_AGSS09.npy
-│   ├── a0_data.npy
-│   └── thermalization_time.npy
 │
 └── figures/
