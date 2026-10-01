@@ -6,10 +6,6 @@ This repository contains the computational work associated with my M.Sc. Physics
 
 **Propagation of TeV--PeV Scale Dark Matter Inside the Sun within the Framework of Non-Relativistic Effective Field Theory**
 
-**Author:** Sukdev Mahapatra  
-**Field:** Astroparticle Physics  
-**Supervisor:** Dr. Divya Sachdeva, Indian Institute of Technology Hyderabad
-
 ---
 
 ## Overview
