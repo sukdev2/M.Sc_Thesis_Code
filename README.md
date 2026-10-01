@@ -20,26 +20,20 @@ The analysis considers **Hydrogen (H), Iron (Fe), and Phosphorus (P)** as repres
 
 The dark matter speed inside the Sun is
 
-$$
-w(r)=\sqrt{u^2+v_{\rm esc}^2(r)}.
-$$
+$$w(r)=\sqrt{u^2+v_{\rm esc}^2(r)}$$
 
 The recoil energy is related to the momentum transfer by
 
-$$
-E_R=\frac{q^2}{2m_T}.
-$$
+$$E_R=\frac{q^2}{2m_T}$$
 
 The capture rate is obtained by integrating over the solar radius, halo velocity distribution, and recoil energy:
 
-$$
-C=
+$$C=
 4\pi
 \int_0^{R_\odot}dr\,r^2
 \int du\,
 \frac{f(u)}{u}\,
-w\,\Omega_v^-(w),
-$$
+w\,\Omega_v^-(w)$$
 
 where
 
@@ -47,63 +41,41 @@ $$\Omega_v^-(w) =
 \sum_T n_T(r)\,w
 \int_{E_R^{\min}}^{E_R^{\max}}
 dE_R\,
-\frac{d\sigma_T}{dE_R}.
-$$
+\frac{d\sigma_T}{dE_R}$$
 
-Thus, the capture calculation contains the factor $w^2$ after substituting $\Omega_v^-(w)$. :chatgpt-content-reference{index="3"}
+Thus, the capture calculation contains the factor $w^2$ after substituting $\Omega_v^-(w)$.
 
 The differential cross section is written in terms of dark-matter and nuclear response functions:
 
-$$
-\frac{d\sigma}{dE_R}
-=
+$$\frac{d\sigma}{dE_R}=
 \frac{1}{2J_T+1}
 \frac{2m_T}{w^2}
 \sum_{\tau,\tau'}
 \sum_k
-R_k^{\tau\tau'}W_k^{\tau\tau'}.
-$$
+R_k^{\tau\tau'}W_k^{\tau\tau'}$$
 
 ---
 
 ## EFT Operators
 
-### $\mathcal{O}_4$
+### $\mathcal{\hat{O}}_4$
 
-$$
-\mathcal{O}_4
-=
-\mathbf{S}_\chi\cdot\mathbf{S}_N
-$$
+$$\mathcal{\hat{O}}_4 = \mathbf{S}_\chi\cdot\mathbf{S}_N$$
 
 spin-dependent interaction.
 
-### $\mathcal{O}_8$
+### $\mathcal{\hat{O}}_8$
 
-$$
-\mathcal{O}_8
-=
-\mathbf{S}_\chi\cdot\mathbf{v}^{\perp}
-$$
+$$\mathcal{O}_8 = \mathbf{S}_\chi\cdot\mathbf{v}^{\perp}$$
 
 velocity-dependent interaction.
 
-### $\mathcal{O}_{15}$
+### $\mathcal{\hat{O}}_{15}$
 
-$$
-\mathcal{O}_{15}
-=
--\left(
+$$\mathcal{O}_{15} = -\left(
 \mathbf{S}_\chi\cdot\frac{\mathbf q}{m_N}
 \right)
-\left[
-\left(
-\mathbf S_N\times\mathbf v^\perp
-\right)
-\cdot
-\frac{\mathbf q}{m_N}
-\right].
-$$
+\left[\left(\mathbf S_N\times\mathbf v^\perp\right) \cdot \frac{\mathbf q}{m_N} \right]$$
 
 This operator contains both momentum- and velocity-dependent contributions. :chatgpt-content-reference{index="4"}
 
