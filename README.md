@@ -1,10 +1,28 @@
 # Dark Matter Capture and Thermalization in the Sun
 
-## Propagation of TeV–PeV Scale Dark Matter Inside the Sun within the Framework of Non-Relativistic Effective Field Theory
+## Propagation of TeV--PeV Scale Dark Matter Inside the Sun within the Framework of Non-Relativistic Effective Field Theory
 
 This repository contains the computational work associated with my M.Sc. Physics research project on the capture, orbital evolution, thermalization, and annihilation of dark matter particles inside the Sun.
 
-The project studies dark matter interactions with solar matter within the framework of Non-Relativistic Effective Field Theory (NR-EFT), with particular emphasis on the evolution of gravitationally captured dark matter particles inside the Sun.
+The project studies dark matter interactions with solar matter within the framework of **Non-Relativistic Effective Field Theory (NR-EFT)**, with particular emphasis on the evolution of gravitationally captured dark matter particles inside the Sun.
+
+---
+
+## Author
+
+**Sukdev Mahapatra**
+
+M.Sc. Physics — Astroparticle Physics
+
+Ramakrishna Mission Residential College (Autonomous), Narendrapur  
+University of Calcutta, India
+
+Research conducted under the supervision of:
+
+**Dr. Divya Sachdeva**  
+Indian Institute of Technology Hyderabad, India
+
+---
 
 ## Overview
 
@@ -32,7 +50,9 @@ The subsequent evolution can be summarized as
 \text{Neutrino Production}.
 \]
 
-The repository implements different stages of this process, beginning with the calculation of the capture rate and extending to orbital evolution, thermalization, annihilation, and neutrino flux.
+This repository contains the computational work associated with the M.Sc. research project on dark matter capture, orbital evolution, thermalization, annihilation, and neutrino production inside the Sun.
+
+The project studies dark matter interactions with solar matter within the framework of Non-Relativistic Effective Field Theory (NR-EFT).
 
 ---
 
@@ -43,8 +63,10 @@ The dark matter–nucleon interaction is described using the **Non-Relativistic 
 The main operators considered in this project are
 
 \[
-\mathcal{O}_4,\qquad
-\mathcal{O}_8,\qquad
+\mathcal{O}_4,
+\qquad
+\mathcal{O}_8,
+\qquad
 \mathcal{O}_{15}.
 \]
 
@@ -54,21 +76,22 @@ These operators describe different dependences on spin, velocity, and momentum t
 
 ## Dark Matter Capture
 
-The capture rate is calculated by integrating over the radial position inside the Sun, the incoming dark matter velocity, the recoil energy, the solar target number density, and the differential scattering cross section.
+The dark matter capture rate is calculated by integrating over the radial position inside the Sun, the incoming dark matter velocity, the recoil energy, the solar target number density, and the differential scattering cross section.
 
 The capture rate is written schematically as
 
 \[
 C =
 4\pi
-\int_0^{R_\odot} dr\,r^2
+\int_0^{R_\odot}
+dr\,r^2
 \int du\,
 \frac{f(u)}{u}
 w^2
 \frac{\rho_\chi}{m_\chi}
 \sum_T n_T(r)
 \int dE_R\,
-\frac{d\sigma_T}{dE_R},
+\frac{d\sigma_T}{dE_R}.
 \]
 
 where
@@ -77,19 +100,20 @@ where
 - \(R_\odot\) is the solar radius,
 - \(f(u)\) is the halo velocity distribution,
 - \(u\) is the dark matter velocity far from the Sun,
-- \(w\) is the local dark matter velocity at radius \(r\),
+- \(w\) is the local dark matter velocity,
 - \(\rho_\chi\) is the local dark matter density,
 - \(m_\chi\) is the dark matter mass,
 - \(n_T(r)\) is the number density of target nucleus \(T\),
-- \(d\sigma_T/dE_R\) is the differential scattering cross section,
 - \(E_R\) is the nuclear recoil energy.
 
-The local velocity of the dark matter particle inside the Sun is
+The local dark matter velocity inside the Sun is
 
 \[
 w(r)
 =
-\sqrt{u^2+v_{\rm esc}^2(r)}.
+\sqrt{
+u^2+v_{\rm esc}^2(r)
+}.
 \]
 
 Here \(v_{\rm esc}(r)\) is the solar escape velocity at radius \(r\).
@@ -107,11 +131,13 @@ In general,
 \[
 \frac{d\sigma}{dE_R}
 =
-\frac{2m_T}{(2j_T+1)w^2}
+\frac{2m_T}
+{(2j_T+1)w^2}
 \sum_{\tau,\tau'}
 \sum_k
-R_k^{\tau\tau'}(v_T^\perp,q)
-W_k^{\tau\tau'}(q),
+R_k^{\tau\tau'}
+(v_T^\perp,q)
+W_k^{\tau\tau'}(q).
 \]
 
 where
@@ -121,8 +147,7 @@ where
 - \(w\) is the incoming dark matter–nucleus relative velocity,
 - \(q\) is the momentum transfer,
 - \(R_k^{\tau\tau'}\) are the dark matter response functions,
-- \(W_k^{\tau\tau'}\) are the nuclear response functions,
-- \(\tau,\tau'\) denote the isoscalar and isovector couplings.
+- \(W_k^{\tau\tau'}\) are the nuclear response functions.
 
 The momentum transfer is related to the recoil energy by
 
@@ -130,7 +155,7 @@ The momentum transfer is related to the recoil energy by
 q=\sqrt{2m_T E_R}.
 \]
 
-The response functions depend on the interaction operator and the target nucleus.
+The indices \(\tau\) and \(\tau'\) denote isoscalar and isovector couplings.
 
 ---
 
@@ -141,7 +166,9 @@ The operator
 \[
 \mathcal{O}_4
 =
-\mathbf{S}_\chi\cdot\mathbf{S}_N
+\mathbf{S}_\chi
+\cdot
+\mathbf{S}_N
 \]
 
 describes a spin-dependent interaction.
@@ -150,18 +177,17 @@ The corresponding differential cross section contains the nuclear spin responses
 
 \[
 W_{\Sigma'}
-\quad\text{and}\quad
+\qquad\text{and}\qquad
 W_{\Sigma''}.
 \]
 
-For the targets considered in the thesis calculation, the dominant contribution is associated with hydrogen.
-
-The differential cross section is written as
+The differential cross section can be written as
 
 \[
 \frac{d\sigma}{dE_R}
 =
-\frac{2m_T}{(2j_T+1)w^2}
+\frac{2m_T}
+{(2j_T+1)w^2}
 \sum_{\tau,\tau'}
 \left[
 R_{\Sigma'}^{\tau\tau'}
@@ -172,6 +198,8 @@ W_{\Sigma''}^{\tau\tau'}
 \right].
 \]
 
+For the targets considered in the thesis calculation, the dominant contribution is associated with hydrogen.
+
 ---
 
 ## Operator \(\mathcal{O}_8\)
@@ -181,7 +209,9 @@ The operator
 \[
 \mathcal{O}_8
 =
-\mathbf{S}_\chi\cdot\mathbf{v}^{\perp}
+\mathbf{S}_\chi
+\cdot
+\mathbf{v}^{\perp}
 \]
 
 introduces a velocity-dependent interaction.
@@ -190,25 +220,28 @@ The relevant nuclear response functions include
 
 \[
 W_M
-\quad\text{and}\quad
+\qquad\text{and}\qquad
 W_\Delta.
 \]
 
-The differential cross section is
+The corresponding differential cross section is
 
 \[
 \frac{d\sigma}{dE_R}
 =
-\frac{2m_T}{(2j_T+1)w^2}
+\frac{2m_T}
+{(2j_T+1)w^2}
 \sum_{\tau,\tau'}
 \left[
-R_M^{\tau\tau'}W_M^{\tau\tau'}
+R_M^{\tau\tau'}
+W_M^{\tau\tau'}
 +
-R_\Delta^{\tau\tau'}W_\Delta^{\tau\tau'}
+R_\Delta^{\tau\tau'}
+W_\Delta^{\tau\tau'}
 \right].
 \]
 
-The velocity dependence of \(\mathcal{O}_8\) modifies the dark matter capture rate relative to a purely spin-dependent interaction.
+The velocity dependence of \(\mathcal{O}_8\) modifies the dark matter capture behavior relative to a purely spin-dependent interaction.
 
 ---
 
@@ -219,12 +252,17 @@ The operator
 \[
 \mathcal{O}_{15}
 =
--\left(
-\mathbf{S}_\chi\cdot\frac{\mathbf{q}}{m_N}
+-
+\left(
+\mathbf{S}_\chi
+\cdot
+\frac{\mathbf{q}}{m_N}
 \right)
 \left[
 \left(
-\mathbf{S}_N\times\mathbf{v}^{\perp}
+\mathbf{S}_N
+\times
+\mathbf{v}^{\perp}
 \right)
 \cdot
 \frac{\mathbf{q}}{m_N}
@@ -237,16 +275,17 @@ The relevant nuclear response functions include
 
 \[
 W_{\Phi''}
-\quad\text{and}\quad
+\qquad\text{and}\qquad
 W_{\Sigma'}.
 \]
 
-The corresponding differential cross section is
+The differential cross section is
 
 \[
 \frac{d\sigma}{dE_R}
 =
-\frac{2m_T}{(2j_T+1)w^2}
+\frac{2m_T}
+{(2j_T+1)w^2}
 \sum_{\tau,\tau'}
 \left[
 R_{\Phi''}^{\tau\tau'}
@@ -257,7 +296,7 @@ W_{\Sigma'}^{\tau\tau'}
 \right].
 \]
 
-Because of its momentum-transfer dependence, \(\mathcal{O}_{15}\) can produce a substantially different capture behavior compared with \(\mathcal{O}_4\) and \(\mathcal{O}_8\).
+Because of its momentum-transfer dependence, \(\mathcal{O}_{15}\) can produce a different capture behavior compared with \(\mathcal{O}_4\) and \(\mathcal{O}_8\).
 
 ---
 
@@ -274,7 +313,7 @@ The solar model provides the radial dependence of quantities such as
 - enclosed mass,
 - hydrogen abundance,
 - helium abundance,
-- and elemental composition.
+- elemental composition.
 
 The tabulated solar profiles are interpolated numerically so that the required quantities can be evaluated at arbitrary radial positions during the capture and orbital calculations.
 
@@ -285,8 +324,10 @@ The tabulated solar profiles are interpolated numerically so that the required q
 For the M.Sc. thesis calculation, the implementation focuses on
 
 \[
-\mathrm{H},\qquad
-\mathrm{Fe},\qquad
+\mathrm{H},
+\qquad
+\mathrm{Fe},
+\qquad
 \mathrm{P}.
 \]
 
@@ -306,7 +347,7 @@ C_{\rm P}.
 
 For the extended calculation, the implementation can be expanded to include the larger set of solar elements considered in the nuclear-response calculations of Catena and Schwabe.
 
-Catena and Schwabe calculated nuclear response functions for the 16 most abundant solar elements:
+The 16 solar elements considered in the Catena--Schwabe calculation are
 
 \[
 \mathrm{H},
@@ -336,7 +377,9 @@ The solar escape velocity is calculated from the enclosed solar mass:
 \[
 v_{\rm esc}(r)
 =
-\sqrt{\frac{2GM(r)}{r}}.
+\sqrt{
+\frac{2GM(r)}{r}
+}.
 \]
 
 The local velocity of an incoming dark matter particle inside the Sun is
@@ -344,14 +387,12 @@ The local velocity of an incoming dark matter particle inside the Sun is
 \[
 w(r)
 =
-\sqrt{u^2+v_{\rm esc}^2(r)}.
+\sqrt{
+u^2+v_{\rm esc}^2(r)
+}.
 \]
 
-Here,
-
-- \(u\) is the asymptotic dark matter velocity,
-- \(v_{\rm esc}(r)\) is the local escape velocity,
-- \(w(r)\) is the local dark matter velocity before scattering.
+Here \(u\) is the asymptotic dark matter velocity and \(w(r)\) is the local dark matter velocity before scattering.
 
 ---
 
@@ -367,9 +408,11 @@ The capture-weighted mean initial semi-major axis is calculated as
 \langle a_0\rangle
 =
 \frac{1}{C}
-\int_0^{R_\odot}dr
+\int_0^{R_\odot}
+dr
 \int dE_R\,
-\frac{d^2C}{dr\,dE_R}
+\frac{d^2C}
+{dr\,dE_R}
 a_0(r,E_R).
 \]
 
@@ -383,14 +426,15 @@ A captured dark matter particle does not necessarily thermalize immediately.
 
 After capture, the particle can continue to cross the solar interior and undergo additional scattering events.
 
-Each scattering event removes a fraction of the orbital energy.
+Each scattering event removes part of the orbital energy.
 
 The orbital energy loss can be written schematically as
 
 \[
 \Delta E_{\rm orb}(a)
 =
-\int_{\rm path} dl
+\int_{\rm path}
+dl
 \sum_T n_T(r)
 \int dE_R\,
 E_R
@@ -424,7 +468,7 @@ r_{\rm peri},
 \qquad
 r_{\rm apo},
 \qquad
-a,
+a.
 \]
 
 where \(E_{\rm orb}\) is the orbital energy, \(L\) is the angular momentum, \(r_{\rm peri}\) is the perihelion distance, \(r_{\rm apo}\) is the apohelion distance, and \(a\) is the semi-major axis.
@@ -452,12 +496,10 @@ r_{\rm apo},
 \qquad
 a,
 \qquad
-T_{\rm orbit},
+T_{\rm orbit}.
 \]
 
-as well as the recoil energy and scattering probability.
-
-The thermalization calculation is used to determine the time required for the captured dark matter population to approach a thermal distribution.
+The recoil energy and scattering probability are also evaluated during the Monte Carlo evolution.
 
 ---
 
@@ -472,10 +514,11 @@ The thermalized WIMP distribution can be represented schematically by
 \[
 n_\chi(r)
 \propto
-\exp\left[
+\exp
+\left[
 -\frac{m_\chi\Phi(r)}
 {k_B T_c}
-\right],
+\right].
 \]
 
 where
@@ -485,7 +528,7 @@ where
 - \(T_c\) is the solar core temperature,
 - \(k_B\) is the Boltzmann constant.
 
-Widmark found that the density profiles of thermalized WIMPs are consistent with a thermal profile determined by the gravitational potential of the Sun and the core temperature.
+The thermal distribution is determined by the gravitational potential of the Sun and the temperature of the solar core.
 
 ---
 
@@ -495,7 +538,7 @@ The thermalization time is the time required for the captured dark matter popula
 
 The Monte Carlo calculation follows the orbital evolution until the WIMP reaches the thermalized regime.
 
-The thermalization time depends on
+The thermalization time depends on quantities such as
 
 \[
 m_\chi,
@@ -506,12 +549,10 @@ m_\chi,
 \qquad
 n_T(r),
 \qquad
-\Phi(r),
+\Phi(r).
 \]
 
-and the solar model.
-
-Widmark studied the thermalization time for WIMPs in the mass range \(10\)--\(1000\) GeV and found that, for most cases considered, the thermalization time is much shorter than the age of the Solar System.
+The calculation also depends on the adopted solar model.
 
 ---
 
@@ -526,7 +567,7 @@ The number of captured dark matter particles evolves according to
 =
 C
 -
-C_A N^2,
+C_A N^2.
 \]
 
 where
@@ -543,11 +584,11 @@ The annihilation rate is
 \frac{1}{2}C_A N^2.
 \]
 
-The factor \(1/2\) accounts for the fact that two dark matter particles participate in each annihilation event.
+The factor of \(1/2\) accounts for the fact that two dark matter particles participate in each annihilation event.
 
 ---
 
-## Capture–Annihilation Equilibrium
+## Capture--Annihilation Equilibrium
 
 The solution for the number of captured particles is
 
@@ -561,10 +602,12 @@ N(t)
 \right).
 \]
 
-The equilibrium condition is
+The equilibrium condition is approximately
 
 \[
-\sqrt{CC_A}\,t_\odot \gg 1,
+\sqrt{CC_A}\,t_\odot
+\gg
+1.
 \]
 
 where \(t_\odot\) is the age of the Sun.
@@ -585,8 +628,6 @@ and therefore
 \frac{C}{2}.
 \]
 
-The code evaluates the annihilation rate using the calculated capture rate and annihilation coefficient.
-
 ---
 
 ## Annihilation Coefficient
@@ -600,12 +641,9 @@ C_A
 {V_{\rm eff}},
 \]
 
-where
+where \(\langle\sigma v\rangle\) is the thermally averaged annihilation cross section and \(V_{\rm eff}\) is the effective volume of the thermalized dark matter distribution.
 
-- \(\langle\sigma v\rangle\) is the thermally averaged annihilation cross section,
-- \(V_{\rm eff}\) is the effective volume of the thermalized dark matter distribution.
-
-The effective volume depends on the dark matter mass and the solar thermal and gravitational profiles.
+The effective volume depends on the dark matter mass and the thermal and gravitational properties of the solar interior.
 
 ---
 
@@ -619,14 +657,14 @@ A simplified total neutrino flux at Earth can be written as
 \Phi_\nu
 =
 \frac{N_\nu\Gamma_A}
-{4\pi D_\odot^2},
+{4\pi D_\odot^2}.
 \]
 
 where
 
-- \(N_\nu\) is the number of neutrinos produced per annihilation under the chosen assumption,
-- \(\Gamma_A\) is the annihilation rate,
-- \(D_\odot\) is the Earth–Sun distance.
+- \(N_\nu\) is the number of neutrinos produced per annihilation,
+- \(\Gamma_A\) is the dark matter annihilation rate,
+- \(D_\odot\) is the Earth--Sun distance.
 
 For the simplified assumption of two neutrinos per annihilation,
 
@@ -639,7 +677,7 @@ For the simplified assumption of two neutrinos per annihilation,
 
 This expression represents a simplified total number flux.
 
-A realistic neutrino prediction requires the neutrino energy spectrum, neutrino propagation through the Sun, absorption, interactions, and neutrino oscillations to be included.
+A realistic neutrino prediction requires the neutrino energy spectrum, propagation through the Sun, absorption, interactions, and neutrino oscillations to be included.
 
 ---
 
