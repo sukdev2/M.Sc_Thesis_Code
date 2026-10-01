@@ -6,13 +6,9 @@ This repository contains the computational work associated with my M.Sc. Physics
 
 The main operators studied are
 
-$$
-\mathcal{O}_4,\qquad
-\mathcal{O}_8,\qquad
-\mathcal{O}_{15}.
-$$
+$$\mathcal{\hat{O}}_4, \qquad \mathcal{\hat{O}}_8, \qquad \mathcal{\hat{O}}_{15}$$
 
-The analysis considers **Hydrogen (H), Iron (Fe), and Phosphorus (P)** as representative solar target nuclei. :chatgpt-content-reference{index="2"}
+The analysis considers **Hydrogen (H), Iron (Fe), and Phosphorus (P)** as representative solar target nuclei. And also we neglect the thermal motion of the target nuclei.
 
 ---
 
@@ -74,10 +70,9 @@ velocity-dependent interaction.
 
 $$\mathcal{O}_{15} = -\left(
 \mathbf{S}_\chi\cdot\frac{\mathbf q}{m_N}
-\right)
-\left[\left(\mathbf S_N\times\mathbf v^\perp\right) \cdot \frac{\mathbf q}{m_N} \right]$$
+\right) \left[\left(\mathbf S_N\times\mathbf v^\perp\right) \cdot \frac{\mathbf q}{m_N} \right]$$
 
-This operator contains both momentum- and velocity-dependent contributions. :chatgpt-content-reference{index="4"}
+This operator contains both momentum- and velocity-dependent contributions.
 
 ---
 
@@ -85,24 +80,14 @@ This operator contains both momentum- and velocity-dependent contributions. :cha
 
 For a collision between dark matter and a target nucleus,
 
-$$
-\frac{\Delta E}{E}
-\sim
-\frac{4m_\chi m_T}
-{(m_\chi+m_T)^2}.
-$$
+$$\frac{\Delta E}{E} \sim \frac{4m_\chi m_T}{(m_\chi + m_T)^2}$$
 
 In the heavy-DM limit,
 
 $$
-m_\chi\gg m_T,
-\qquad
-\frac{\Delta E}{E}
-\sim
-\frac{4m_T}{m_\chi}.
-$$
+m_\chi \gg m_T, \qquad \frac{\Delta E}{E} \sim \frac{4m_T}{m_\chi}$$
 
-Therefore, heavy dark matter loses only a small fraction of its energy in each scattering, making capture and subsequent thermalization increasingly inefficient. :chatgpt-content-reference{index="5"}
+Therefore, heavy dark matter loses only a small fraction of its energy in each scattering, making capture and subsequent thermalization increasingly inefficient.
 
 ---
 
@@ -112,14 +97,7 @@ After capture, the dark matter particle follows a gravitationally bound orbit in
 
 The capture-weighted initial semi-major axis is
 
-$$
-\langle a_0\rangle
-=
-\frac{1}{C}
-\int dr\int dE_R\,
-\frac{d^2C}{dr\,dE_R}
-a_0(r,E_R).
-$$
+$$\langle a_0\rangle = \frac{1}{C} \int dr\int dE_R\, \frac{d^2C}{dr\,dE_R} a_0(r,E_R)$$
 
 The orbital evolution is studied through the energy lost in subsequent scatterings.
 
@@ -129,51 +107,27 @@ The orbital evolution is studied through the energy lost in subsequent scatterin
 
 The number of captured dark matter particles satisfies
 
-$$
-\frac{dN}{dt}
-=
-C-C_A N^2.
-$$
+$$\frac{dN}{dt} = C-C_A N^2$$
 
 Its solution is
 
-$$
-N(t)
-=
-\sqrt{\frac{C}{C_A}}\,
-\tanh\left(\sqrt{CC_A}\,t\right).
-$$
+$$N(t) = \sqrt{\frac{C}{C_A}}\, \tanh\left(\sqrt{CC_A}\,t\right)$$
 
 The annihilation rate is
 
-$$
-\Gamma_A
-=
-\frac{1}{2}C_A N^2.
-$$
+$$\Gamma_A = \frac{1}{2}C_A N^2$$
 
 The spatial dark matter distribution is written as
 
-$$
-n(r)=N(t_\odot)g(r),
-$$
+$$n(r)=N(t_\odot)g(r)$$
 
 with
 
-$$
-\int g(r)\,dV=1,
-$$
+$$\int g(r)\,dV=1$$
 
 and
 
-$$
-C_A
-=
-\langle\sigma v\rangle
-\int g^2(r)\,dV.
-$$
-
-The thesis considers thermal, non-thermal, and interpolated dark-matter spatial distributions. :chatgpt-content-reference{index="6"}
+$$C_A = \langle\sigma v\rangle \int g^2(r)\,dV$$
 
 ---
 
@@ -182,51 +136,36 @@ The thesis considers thermal, non-thermal, and interpolated dark-matter spatial 
 For the simplified annihilation channel
 
 $$
-\chi\chi\rightarrow\nu\nu,
+\chi\chi\rightarrow\nu\nu
 $$
 
 two neutrinos are produced per annihilation. The differential flux at Earth is
 
-$$
-\frac{d\Phi_\nu}{dE_\nu}
-=
-\frac{2\Gamma_A}
-{4\pi D_\odot^2}
-\delta(E_\nu-m_\chi).
-$$
-
-A realistic prediction would additionally require neutrino propagation, absorption, and oscillation effects inside the Sun. :chatgpt-content-reference{index="7"}
+$$\frac{d\Phi_\nu}{dE_\nu} = \frac{2\Gamma_A}{4\pi D_\odot^2} \delta(E_\nu-m_\chi)$$
 
 ---
 
 ## Main Results
 
-The thesis investigates the mass range
+We investigates the mass range
 
-$$
-10^2~{\rm GeV}
-\leq m_\chi
-\leq
-10^5~{\rm GeV},
-$$
+$$10^2~{\rm GeV} \leq m_\chi \leq 10^5~{\rm GeV}$$
 
 with particular emphasis on the heavy-dark-matter regime.
 
 The results show that:
 
 - Capture depends strongly on the NR-EFT operator and nuclear response.
-- $\mathcal O_4$ is associated with spin-dependent interactions.
-- $\mathcal O_8$ contains transverse-velocity dependence.
-- $\mathcal O_{15}$ has strong momentum dependence.
+- $\mathcal{\hat{O}}_4$ is associated with spin-dependent interactions.
+- $\mathcal{\hat{O}}_8$ contains transverse-velocity dependence.
+- $\mathcal{\hat{O}}_{15}$ has strong momentum dependence.
 - Heavy dark matter suffers very small fractional energy loss per scattering.
 - Thermalization becomes inefficient and extended non-thermal orbits can persist.
 - The capture--annihilation system remains far from equilibrium, with
 
-$$
-\sqrt{CC_A}\,t_\odot\ll1.
-$$
+$$\sqrt{CC_A}\,t_\odot\ll1$$
 
-These features determine the resulting annihilation rate and neutrino flux. :chatgpt-content-reference{index="8"}
+These features determine the resulting annihilation rate and neutrino flux.
 
 ---
 
@@ -249,12 +188,18 @@ The notebooks contain the numerical implementation of the capture, orbital evolu
 
 ## References
 
-- Catena & Schwabe, *Form factors for dark matter capture by the Sun in effective theories*, arXiv:1501.03729.
-- Widmark, *Thermalization time scales for WIMP capture by the Sun in effective theories*, arXiv:1703.06878.
-- Fitzpatrick et al., *The Effective Field Theory of Dark Matter Direct Detection*, arXiv:1203.3542.
+1. R. Catena and B. Schwabe,  
+   *Form factors for dark matter capture by the Sun in effective theories*,  
+   JCAP 04 (2015) 042.  
+   [arXiv:1501.03729](https://arxiv.org/abs/1501.03729)
 
+2. A. Widmark,  
+   *Thermalization time scales for WIMP capture by the Sun in effective theories*,  
+   JCAP 05 (2017) 046.  
+   [arXiv:1703.06878](https://arxiv.org/abs/1703.06878)
+
+3. A. L. Fitzpatrick et al.,  
+   *The Effective Field Theory of Dark Matter Direct Detection*,  
+   JCAP 02 (2013) 004.  
+   [arXiv:1203.3542](https://arxiv.org/abs/1203.3542)
 ---
-
-## License
-
-This project is released under the **MIT License**.
