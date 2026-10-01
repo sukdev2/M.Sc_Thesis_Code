@@ -32,11 +32,9 @@ The main physical sequence is
 
 The main NR-EFT operators studied are
 
-\begin{equation}
-\mathcal{O}_4,\qquad
+$\mathcal{O}_4,\qquad
 \mathcal{O}_8,\qquad
-\mathcal{O}_{15}.
-\end{equation}
+\mathcal{O}_{15}$
 
 ---
 
