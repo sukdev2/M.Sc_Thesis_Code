@@ -1,5 +1,7 @@
 # Dark Matter Capture and Thermalization in the Sun
 
+[![Status](https://img.shields.io/badge/Status-Completed-yellow.svg)](#)
+
 ### M.Sc. Research Project
 
 This repository contains the computational work associated with my M.Sc. Physics thesis on the **capture, propagation, and thermalization of TeV-PeV scale dark matter inside the Sun** using **Non-Relativistic Effective Field Theory (NR-EFT)**.
