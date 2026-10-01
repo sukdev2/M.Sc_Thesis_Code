@@ -24,27 +24,26 @@ $$E_R=\frac{q^2}{2m_T}$$
 
 The capture rate is obtained by integrating over the solar radius, halo velocity distribution, and recoil energy:
 
-$$C=
-4\pi \int_0^{R_\odot} dr r^2 \int du \frac{f(u)}{u} w \Omega_v^-(w)$$
+$$\boxed{C= 4\pi \int_0^{R_\odot} dr r^2 \int du \frac{f(u)}{u} w \Omega_v^-(w)}$$
 
 where
 
-$$\Omega_v^-(w) =
+$$\boxed{\Omega_v^-(w) =
 \sum_T n_T(r) w
 \int_{E_R^{\min}}^{E_R^{\max}}
 dE_R
-\frac{d\sigma_T}{dE_R}$$
+\frac{d\sigma_T}{dE_R}}$$
 
 Thus, the capture calculation contains the factor $w^2$ after substituting $\Omega_v^-(w)$.
 
 The differential cross section is written in terms of dark-matter and nuclear response functions:
 
-$$\frac{d\sigma}{dE_R}=
+$$\boxed{\frac{d\sigma}{dE_R}=
 \frac{1}{2J_T+1}
 \frac{2m_T}{w^2}
 \sum_{\tau,\tau'}
 \sum_k
-R_k^{\tau\tau'}W_k^{\tau\tau'}$$
+R_k^{\tau\tau'}W_k^{\tau\tau'}}$$
 
 ---
 
@@ -58,13 +57,13 @@ spin-dependent interaction.
 
 ### $\mathcal{\hat{O}}_8$
 
-$$\mathcal{O}_8 = \mathbf{S}_\chi\cdot\mathbf{v}^{\perp}$$
+$$\mathcal{\hat{O}}_8 = \mathbf{S}_\chi\cdot\mathbf{v}^{\perp}$$
 
 velocity-dependent interaction.
 
 ### $\mathcal{\hat{O}}_{15}$
 
-$$\mathcal{O}_{15} = -\left(
+$$\mathcal{\hat{O}}_{15} = -\left(
 \mathbf{S}_\chi\cdot\frac{\mathbf q}{m_N}
 \right) \left[\left(\mathbf S_N\times\mathbf v^\perp\right) \cdot \frac{\mathbf q}{m_N} \right]$$
 
@@ -76,7 +75,7 @@ This operator contains both momentum- and velocity-dependent contributions.
 
 For a collision between dark matter and a target nucleus,
 
-$$\frac{\Delta E}{E} \sim \frac{4m_\chi m_T}{(m_\chi + m_T)^2}$$
+$$\boxed{\frac{\Delta E}{E} \sim \frac{4m_\chi m_T}{(m_\chi + m_T)^2}}$$
 
 In the heavy-DM limit,
 
@@ -93,7 +92,7 @@ After capture, the dark matter particle follows a gravitationally bound orbit in
 
 The capture-weighted initial semi-major axis is
 
-$$\langle a_0\rangle = \frac{1}{C} \int dr\int dE_R\, \frac{d^2C}{dr\,dE_R} a_0(r,E_R)$$
+$$\boxed{\langle a_0\rangle = \frac{1}{C} \int dr\int dE_R \frac{d^2C}{drdE_R} a_0(r,E_R)}$$
 
 The orbital evolution is studied through the energy lost in subsequent scatterings.
 
@@ -107,7 +106,7 @@ $$\frac{dN}{dt} = C-C_A N^2$$
 
 Its solution is
 
-$$N(t) = \sqrt{\frac{C}{C_A}}\, \tanh\left(\sqrt{CC_A}\,t\right)$$
+$$N(t) = \sqrt{\frac{C}{C_A}} \tanh\left(\sqrt{CC_A}t\right)$$
 
 The annihilation rate is
 
@@ -123,7 +122,7 @@ $$\int g(r)\,dV=1$$
 
 and
 
-$$C_A = \langle\sigma v\rangle \int g^2(r)\,dV$$
+$$C_A = \langle\sigma v\rangle \int g^2(r) dV$$
 
 ---
 
@@ -131,13 +130,11 @@ $$C_A = \langle\sigma v\rangle \int g^2(r)\,dV$$
 
 For the simplified annihilation channel
 
-$$
-\chi\chi\rightarrow\nu\nu
-$$
+$$\chi\chi\rightarrow\nu\nu$$
 
 two neutrinos are produced per annihilation. The differential flux at Earth is
 
-$$\frac{d\Phi_\nu}{dE_\nu} = \frac{2\Gamma_A}{4\pi D_\odot^2} \delta(E_\nu-m_\chi)$$
+$$\boxed{\frac{d\Phi_\nu}{dE_\nu} = \frac{2\Gamma_A}{4\pi D_\odot^2} \delta(E_\nu-m_\chi)}$$
 
 ---
 
@@ -159,7 +156,7 @@ The results show that:
 - Thermalization becomes inefficient and extended non-thermal orbits can persist.
 - The capture--annihilation system remains far from equilibrium, with
 
-$$\sqrt{CC_A}\,t_\odot\ll1$$
+$$\sqrt{CC_A} t_\odot\ll1$$
 
 These features determine the resulting annihilation rate and neutrino flux.
 
