@@ -2,7 +2,7 @@
 
 ### M.Sc. Research Project
 
-This repository contains the computational work associated with my M.Sc. Physics thesis on the **capture, propagation, and thermalization of TeV-scale dark matter inside the Sun** using **Non-Relativistic Effective Field Theory (NR-EFT)**.
+This repository contains the computational work associated with my M.Sc. Physics thesis on the **capture, propagation, and thermalization of TeV-PeV scale dark matter inside the Sun** using **Non-Relativistic Effective Field Theory (NR-EFT)**.
 
 The main operators studied are
 
