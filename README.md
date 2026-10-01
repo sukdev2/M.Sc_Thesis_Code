@@ -5,7 +5,6 @@
 This repository contains the computational work associated with my M.Sc. Physics thesis on the **capture, propagation, and thermalization of TeV-PeV scale dark matter inside the Sun** using **Non-Relativistic Effective Field Theory (NR-EFT)**.
 
 The main operators studied are
-
 $$\mathcal{\hat{O}}_4, \qquad \mathcal{\hat{O}}_8, \qquad \mathcal{\hat{O}}_{15}$$
 
 The analysis considers **Hydrogen (H), Iron (Fe), and Phosphorus (P)** as representative solar target nuclei. And also we neglect the thermal motion of the target nuclei.
