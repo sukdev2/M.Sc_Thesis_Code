@@ -43,9 +43,7 @@ $$
 
 where
 
-$$
-\Omega_v^-(w)
-=
+$$\Omega_v^-(w) =
 \sum_T n_T(r)\,w
 \int_{E_R^{\min}}^{E_R^{\max}}
 dE_R\,
