@@ -2,35 +2,9 @@
 
 ### M.Sc. Research Project
 
-This repository contains the computational work associated with my M.Sc. Physics research project:
+This repository contains the computational work associated with my M.Sc. Physics thesis on the **capture, propagation, and thermalization of TeV-scale dark matter inside the Sun** using **Non-Relativistic Effective Field Theory (NR-EFT)**.
 
-**Propagation of TeV--PeV Scale Dark Matter Inside the Sun within the Framework of Non-Relativistic Effective Field Theory (NR-EFT)**
-
-The project studies the capture and subsequent evolution of dark matter particles inside the Sun using **Non-Relativistic Effective Field Theory (NR-EFT)**.
-
----
-
-## Overview
-
-The main physical sequence considered is
-
-$$
-\text{Halo Dark Matter}
-\rightarrow
-\text{Scattering}
-\rightarrow
-\text{Gravitational Capture}
-\rightarrow
-\text{Bound Orbit}
-\rightarrow
-\text{Orbital Energy Loss}
-\rightarrow
-\text{Thermalization}
-\rightarrow
-\text{Annihilation}.
-$$
-
-The main NR-EFT operators studied are
+The main operators studied are
 
 $$
 \mathcal{O}_4,\qquad
@@ -38,44 +12,55 @@ $$
 \mathcal{O}_{15}.
 $$
 
+The analysis considers **Hydrogen (H), Iron (Fe), and Phosphorus (P)** as representative solar target nuclei. :chatgpt-content-reference{index="2"}
+
 ---
 
 ## Dark Matter Capture
 
-The capture rate is calculated by integrating over the solar radius, incoming dark matter velocity, recoil energy, and solar target elements:
+The dark matter speed inside the Sun is
 
 $$
-C =
+w(r)=\sqrt{u^2+v_{\rm esc}^2(r)}.
+$$
+
+The recoil energy is related to the momentum transfer by
+
+$$
+E_R=\frac{q^2}{2m_T}.
+$$
+
+The capture rate is obtained by integrating over the solar radius, halo velocity distribution, and recoil energy:
+
+$$
+C=
 4\pi
-\int_0^{R_\odot} dr\,r^2
+\int_0^{R_\odot}dr\,r^2
 \int du\,
 \frac{f(u)}{u}\,
-w^2
-\frac{\rho_\chi}{m_\chi}
-\sum_T n_T(r)
-\int dE_R\,
+w\,\Omega_v^-(w),
+$$
+
+where
+
+$$
+\Omega_v^-(w)
+=
+\sum_T n_T(r)\,w
+\int_{E_R^{\min}}^{E_R^{\max}}
+dE_R\,
 \frac{d\sigma_T}{dE_R}.
 $$
 
-The dark matter velocity inside the Sun is
+Thus, the capture calculation contains the factor $w^2$ after substituting $\Omega_v^-(w)$. :chatgpt-content-reference{index="3"}
 
-$$
-w(r)=
-\sqrt{u^2+v_{\rm esc}^2(r)}.
-$$
-
-The momentum transfer is
-
-$$
-q=\sqrt{2m_T E_R}.
-$$
-
-The differential cross section is calculated using the dark matter and nuclear response functions:
+The differential cross section is written in terms of dark-matter and nuclear response functions:
 
 $$
 \frac{d\sigma}{dE_R}
 =
-\frac{2m_T}{(2j_T+1)w^2}
+\frac{1}{2J_T+1}
+\frac{2m_T}{w^2}
 \sum_{\tau,\tau'}
 \sum_k
 R_k^{\tau\tau'}W_k^{\tau\tau'}.
@@ -83,150 +68,110 @@ $$
 
 ---
 
-## NR-EFT Operators
+## EFT Operators
 
-### Operator $\mathcal{O}_4$
+### $\mathcal{O}_4$
 
 $$
 \mathcal{O}_4
 =
-\mathbf{S}_\chi\cdot\mathbf{S}_N.
+\mathbf{S}_\chi\cdot\mathbf{S}_N
 $$
 
-This is a spin-dependent interaction involving the nuclear responses
+spin-dependent interaction.
 
-$$
-W_{\Sigma'}
-\qquad\text{and}\qquad
-W_{\Sigma''}.
-$$
-
-### Operator $\mathcal{O}_8$
+### $\mathcal{O}_8$
 
 $$
 \mathcal{O}_8
 =
-\mathbf{S}_\chi\cdot\mathbf{v}^{\perp}.
+\mathbf{S}_\chi\cdot\mathbf{v}^{\perp}
 $$
 
-This is a velocity-dependent interaction involving responses such as
+velocity-dependent interaction.
 
-$$
-W_M
-\qquad\text{and}\qquad
-W_\Delta.
-$$
-
-### Operator $\mathcal{O}_{15}$
+### $\mathcal{O}_{15}$
 
 $$
 \mathcal{O}_{15}
 =
 -\left(
-\mathbf{S}_\chi\cdot\frac{\mathbf{q}}{m_N}
+\mathbf{S}_\chi\cdot\frac{\mathbf q}{m_N}
 \right)
 \left[
 \left(
-\mathbf{S}_N\times\mathbf{v}^{\perp}
+\mathbf S_N\times\mathbf v^\perp
 \right)
 \cdot
-\frac{\mathbf{q}}{m_N}
+\frac{\mathbf q}{m_N}
 \right].
 $$
 
-This operator has explicit momentum-transfer dependence and involves responses including
-
-$$
-W_{\Phi''}
-\qquad\text{and}\qquad
-W_{\Sigma'}.
-$$
+This operator contains both momentum- and velocity-dependent contributions. :chatgpt-content-reference{index="4"}
 
 ---
 
-## Solar Models and Target Elements
+## Heavy Dark Matter
 
-The main solar model used in the project is **BP2000**, with an additional comparison using **AGSS09**.
-
-For the thesis calculation, the main target elements are
+For a collision between dark matter and a target nucleus,
 
 $$
-\mathrm{H},\qquad
-\mathrm{Fe},\qquad
-\mathrm{P}.
+\frac{\Delta E}{E}
+\sim
+\frac{4m_\chi m_T}
+{(m_\chi+m_T)^2}.
 $$
 
-The total capture rate is therefore
+In the heavy-DM limit,
 
 $$
-C_{\rm total}
-=
-C_{\rm H}
-+
-C_{\rm Fe}
-+
-C_{\rm P}.
+m_\chi\gg m_T,
+\qquad
+\frac{\Delta E}{E}
+\sim
+\frac{4m_T}{m_\chi}.
 $$
 
-The repository keeps the individual elemental contributions separate to study their dependence on dark matter mass and interaction operator.
+Therefore, heavy dark matter loses only a small fraction of its energy in each scattering, making capture and subsequent thermalization increasingly inefficient. :chatgpt-content-reference{index="5"}
 
 ---
 
-## Initial Orbit and Thermalization
+## Orbital Evolution
 
-After a scattering event produces a gravitationally bound dark matter particle, its initial semi-major axis is determined from its orbital energy.
+After capture, the dark matter particle follows a gravitationally bound orbit inside the Sun. Repeated scattering events remove orbital energy and reduce its semi-major axis.
 
-The capture-weighted average initial semi-major axis is
+The capture-weighted initial semi-major axis is
 
 $$
 \langle a_0\rangle
 =
 \frac{1}{C}
-\int_0^{R_\odot}dr
-\int dE_R\,
+\int dr\int dE_R\,
 \frac{d^2C}{dr\,dE_R}
-\,a_0(r,E_R).
+a_0(r,E_R).
 $$
 
-Subsequent scatterings remove orbital energy according to
-
-$$
-\Delta E_{\rm orb}
-=
-\int_{\rm path} dl
-\sum_T n_T(r)
-\int dE_R\,
-E_R
-\frac{d\sigma_T}{dE_R}.
-$$
-
-The orbital evolution is followed using a Monte Carlo approach based on the work of **Widmark**.
-
-A thermalized dark matter population can be represented schematically as
-
-$$
-n_\chi(r)
-\propto
-\exp\left[
--\frac{m_\chi\Phi(r)}
-{k_B T_c}
-\right],
-$$
-
-where $\Phi(r)$ is the solar gravitational potential and $T_c$ is the solar core temperature.
-
-The thermalization time is obtained by following the evolution of the captured dark matter orbit through repeated scattering events.
+The orbital evolution is studied through the energy lost in subsequent scatterings.
 
 ---
 
-## Annihilation
+## Capture--Annihilation
 
-The number of captured dark matter particles evolves according to
+The number of captured dark matter particles satisfies
 
 $$
 \frac{dN}{dt}
 =
 C-C_A N^2.
+$$
+
+Its solution is
+
+$$
+N(t)
+=
+\sqrt{\frac{C}{C_A}}\,
+\tanh\left(\sqrt{CC_A}\,t\right).
 $$
 
 The annihilation rate is
@@ -237,153 +182,109 @@ $$
 \frac{1}{2}C_A N^2.
 $$
 
-The solution for the captured population is
+The spatial dark matter distribution is written as
 
 $$
-N(t)
-=
-\sqrt{\frac{C}{C_A}}
-\tanh\left(
-\sqrt{CC_A}\,t
-\right).
+n(r)=N(t_\odot)g(r),
 $$
 
-The annihilation coefficient is
+with
+
+$$
+\int g(r)\,dV=1,
+$$
+
+and
 
 $$
 C_A
 =
-\frac{\langle\sigma v\rangle}{V_{\rm eff}}.
+\langle\sigma v\rangle
+\int g^2(r)\,dV.
 $$
+
+The thesis considers thermal, non-thermal, and interpolated dark-matter spatial distributions. :chatgpt-content-reference{index="6"}
 
 ---
 
 ## Neutrino Flux
 
-A simplified total neutrino flux at Earth is
+For the simplified annihilation channel
 
 $$
-\Phi_\nu
-=
-\frac{N_\nu\Gamma_A}
-{4\pi D_\odot^2}.
+\chi\chi\rightarrow\nu\nu,
 $$
 
-For the simplified assumption of two neutrinos per annihilation,
+two neutrinos are produced per annihilation. The differential flux at Earth is
 
 $$
-\Phi_\nu
+\frac{d\Phi_\nu}{dE_\nu}
 =
 \frac{2\Gamma_A}
-{4\pi D_\odot^2}.
+{4\pi D_\odot^2}
+\delta(E_\nu-m_\chi).
 $$
 
-A realistic neutrino prediction requires the neutrino spectrum, propagation through the Sun, absorption, and oscillations to be included.
+A realistic prediction would additionally require neutrino propagation, absorption, and oscillation effects inside the Sun. :chatgpt-content-reference{index="7"}
 
 ---
 
-## Numerical Implementation
+## Main Results
 
-The calculations are implemented mainly in **Python** using Jupyter notebooks.
+The thesis investigates the mass range
 
-The repository includes:
+$$
+10^2~{\rm GeV}
+\leq m_\chi
+\leq
+10^5~{\rm GeV},
+$$
 
-- NR-EFT capture calculations
-- Solar-model interpolation
-- Nuclear response functions
-- Differential cross sections
-- Capture-rate calculations
-- Element-wise capture contributions
-- Initial orbital semi-major axis calculations
-- Monte Carlo orbital evolution
-- Thermalization calculations
-- Annihilation-rate calculations
-- Simplified neutrino-flux calculations
-- BP2000 and AGSS09 solar-model comparisons
-- Figures and numerical data
+with particular emphasis on the heavy-dark-matter regime.
+
+The results show that:
+
+- Capture depends strongly on the NR-EFT operator and nuclear response.
+- $\mathcal O_4$ is associated with spin-dependent interactions.
+- $\mathcal O_8$ contains transverse-velocity dependence.
+- $\mathcal O_{15}$ has strong momentum dependence.
+- Heavy dark matter suffers very small fractional energy loss per scattering.
+- Thermalization becomes inefficient and extended non-thermal orbits can persist.
+- The capture--annihilation system remains far from equilibrium, with
+
+$$
+\sqrt{CC_A}\,t_\odot\ll1.
+$$
+
+These features determine the resulting annihilation rate and neutrino flux. :chatgpt-content-reference{index="8"}
 
 ---
 
-## Repository Structure
+## Repository Contents
 
 ```text
 M.Sc_Thesis_Code/
 │
 ├── README.md
 ├── LICENSE
-├── DATA_SOURCES.md
-├── requirements.txt
-│
 ├── Code/
-│
 ├── Data/
-│   ├── bp2000_standard.txt
-│   └── AGSS09/
-│
 ├── Figures/
-│
 └── Notebook/
-    └── Annihilation & Flux.ipynb
 ```
 
----
-
-## Software
-
-The project uses Python and scientific computing libraries including:
-
-- Python
-- NumPy
-- SciPy
-- Matplotlib
-- SciencePlots
-- Astropy
-- Jupyter Notebook
-
-Install the required packages using:
-
-```bash
-pip install -r requirements.txt
-```
+The notebooks contain the numerical implementation of the capture, orbital evolution, annihilation, and neutrino-flux calculations.
 
 ---
 
 ## References
 
-1. **Catena & Schwabe**,  
-   *Form factors for dark matter capture by the Sun in effective theories*,  
-   arXiv:1501.03729.
-
-2. **Widmark**,  
-   *Thermalization time scales for WIMP capture by the Sun in effective theories*,  
-   arXiv:1703.06878.
-
-3. **Fitzpatrick et al.**,  
-   *The Effective Field Theory of Dark Matter Direct Detection*,  
-   arXiv:1203.3542.
-
-4. **Fan, Reece & Wang**,  
-   *Non-relativistic effective theory of dark matter direct detection*,  
-   arXiv:1008.1591.
-
----
-
-## Acknowledgements
-
-This work was carried out as part of my M.Sc. Physics research project.
-
-I acknowledge the guidance and supervision received during the project and the use of the scientific literature and solar-model data relevant to dark matter capture and thermalization studies.
+- Catena & Schwabe, *Form factors for dark matter capture by the Sun in effective theories*, arXiv:1501.03729.
+- Widmark, *Thermalization time scales for WIMP capture by the Sun in effective theories*, arXiv:1703.06878.
+- Fitzpatrick et al., *The Effective Field Theory of Dark Matter Direct Detection*, arXiv:1203.3542.
 
 ---
 
 ## License
 
-This repository is released under the **MIT License**.
-
-See [`LICENSE`](LICENSE) for details.
-
----
-
-## Note
-
-The code and notebooks are provided primarily for research, learning, and reproducibility purposes. Numerical results may depend on the chosen solar model, nuclear response functions, astrophysical assumptions, numerical resolution, and implementation details.
+This project is released under the **MIT License**.
