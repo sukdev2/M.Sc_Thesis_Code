@@ -25,7 +25,7 @@ $$E_R=\frac{q^2}{2m_T}$$
 The capture rate is obtained by integrating over the solar radius, halo velocity distribution, and recoil energy:
 
 $$C=
-4\pi \int_0^{R_\odot} dr \, r^2 \int du \, \frac{f(u)}{u} \, w \, \Omega_v^-(w)$$
+4\pi \int_0^{R_\odot} dr r^2 \int du \frac{f(u)}{u} w \Omega_v^-(w)$$
 
 where
 
